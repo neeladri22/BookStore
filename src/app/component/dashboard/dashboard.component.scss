@@ -1,0 +1,65 @@
+.container {
+    height: 90%;
+    width: 100%;
+}
+.tool {
+    background-color: brown;
+}
+.img-Icon {
+    padding-left: 64%;
+    padding-right: 10%;
+    padding-top: 3%;
+}
+
+#text {
+    color: white;
+}
+
+.search {
+    margin-left: 13%;
+    width: 33%;
+    height: 54%;
+    padding: 0px;
+}
+
+.searchInput {
+    height: 50%;
+    width: 90%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    color: dimgrey;
+
+}
+
+.Profile {
+    display: flex;
+    flex-direction: column-reverse;
+    background: brown;
+    border-color: brown;
+    color: white;
+    border: transparent;
+    cursor: pointer;
+    margin-left: 20%;
+}
+
+.cart {
+    display: flex;
+    flex-direction: column-reverse;
+    background: brown;
+    border-color: brown;
+    color: white;
+    border: transparent;
+    margin-left: 2%;
+    cursor: pointer;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+    padding: 15px;
+    align-items: center;
+}

@@ -10,14 +10,14 @@
         </div>
     </mat-card>
     <mat-card class="mat2">
-       
-        <div class="login">
-            <P>LOGIN</P>
+        <div fxLayout="row">
+            <div class="login">
+                <P>LOGIN</P>
+            </div>
+            <div class="signup" routerLink="/signUp">
+                <p>SIGNUP</p>
+            </div>
         </div>
-        <div class="signup" routerLink="/signUp">
-            <p>SIGNUP</p>
-        </div>
-      
         <form [formGroup]="loginForm">
             <div class="form-fields">
 
