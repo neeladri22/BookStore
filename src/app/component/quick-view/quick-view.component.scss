@@ -1,0 +1,199 @@
+.mainheader {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 94vh;
+}
+
+.header {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    height: 90vh;
+}
+
+.smallimages {
+    margin-left: 50px;
+    margin-top: 28%;
+}
+
+.small1 {
+    border: 1px solid rgb(165, 42, 42);
+    background-color: rgba(255, 192, 203, 0.562);
+    padding: 3px;
+}
+
+.img1 {
+    width: 40px;
+    height: 50px;
+    padding-top: 3px;
+}
+
+.small2 {
+    border: 1px solid gainsboro;
+    padding: 4px;
+
+}
+
+.img2 {
+    width: 40px;
+    height: 50px;
+    padding-top: 3px;
+}
+
+.maincontent {
+    width: 35%;
+    padding: 1%;
+    margin-top: 2%;
+
+}
+
+.image {
+    padding: 4%;
+    height: 380px;
+    border: 1px solid gainsboro;
+    margin-left: -13px;
+    margin-top: 2px;
+}
+
+.btn {
+    background-color: brown;
+    color: white;
+    border: none;
+    height: 35px;
+    margin-top: 16%;
+    width: 45%;
+    margin-left: -5%;
+    cursor: pointer;
+}
+
+.btn2 {
+    background-color: black;
+    color: white;
+    margin-top: 14%;
+    width: 50%;
+    height: 35px;
+    margin-left: 10%;
+    cursor: pointer;
+}
+
+#fav-icons {
+    color: white;
+    font-size: 122%;
+    padding-top: 4px;
+}
+
+.title {
+    font-size: 26px;
+    margin-top: 6%;
+    padding-left: 19%;
+}
+
+.author {
+    color: grey;
+    font-size: 17px;
+    padding-top: -17%;
+    padding-left: 19%;
+
+}
+
+.rating {
+    background: rgba(0, 100, 0, 0.87);
+    height: 20px;
+    width: 46px;
+    color: white;
+    margin-bottom: 10px;
+    margin-top: 3%;
+    margin-left: 19%;
+}
+
+.Star {
+    height: 11px;
+    width: 11px;
+    font-size: 10px;
+    margin-top: -1px;
+}
+
+#del {
+    color: gray;
+}
+
+#count {
+    margin-left: 30%;
+    margin-top: -7%;
+    color: gray;
+}
+
+.dicounted-price {
+    font-weight: 600;
+    margin-left: 19%;
+}
+
+.actual-price {
+    margin-left: 19%;
+    text-decoration: line-through;
+    color: gray;
+}
+
+
+.para1 {
+    padding-left: 8%;
+    padding-top: 5%;
+}
+
+.booktitle {
+    margin-left: 12%;
+    font-size: medium;
+    color: gray;
+}
+
+.bookparagraph {
+    margin-left: 12%;
+    font-size: small;
+    color: gray;
+}
+
+
+.feedback {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-left: 19%;
+}
+
+.bookdetails {
+    width: 55%;
+
+}
+
+.overallrating {
+    height: 32%;
+    background: whitesmoke;
+    margin-left: 19%;
+
+}
+
+.rate-para {
+    margin-left: 15px;
+}
+
+.ratename {
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 10px;
+
+}
+
+.rate {
+    margin-right: 10%;
+}
+
+.submitbutton {
+    height: 33px;
+    width: 95px;
+
+    margin-top: 140px;
+    margin-left: 270px;
+    color: white;
+    background: blue;
+    border: none;
+}

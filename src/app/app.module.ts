@@ -16,6 +16,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import { GetallbookComponent } from './component/getallbook/getallbook.component';
 import {MatSelectModule} from '@angular/material/select';
+import { QuickViewComponent } from './component/quick-view/quick-view.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import {MatSelectModule} from '@angular/material/select';
     SignUpComponent,
     DashboardComponent,
     GetallbookComponent,
+    QuickViewComponent,
   
   ],
   imports: [

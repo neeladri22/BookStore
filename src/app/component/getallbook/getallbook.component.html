@@ -17,7 +17,7 @@
     <div class="bookcard" >
         <div class="entirebook" *ngFor="let Book of AllBooks">
             <div class="bookimg" >
-                <img class="img1" src="../../../assets/book1.png" alt="">
+                <img class="img1" src="../../../assets/book1.png" alt="" (click)="quickview(Book)">
             </div>
             <h2 class="title">{{Book.bookName}}</h2>
             <p id="para">by {{Book.author}}</p>
