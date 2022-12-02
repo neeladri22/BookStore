@@ -14,12 +14,17 @@ import {HttpClientModule} from '@angular/common/http';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+import { GetallbookComponent } from './component/getallbook/getallbook.component';
+import {MatSelectModule} from '@angular/material/select';
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SignUpComponent,
-    DashboardComponent
+    DashboardComponent,
+    GetallbookComponent,
+  
   ],
   imports: [
     BrowserModule,
@@ -32,7 +37,8 @@ import {MatIconModule} from '@angular/material/icon';
     BrowserAnimationsModule,
     HttpClientModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatSelectModule
   
 
   ],

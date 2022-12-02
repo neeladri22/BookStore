@@ -14,25 +14,57 @@
 #text {
     color: white;
 }
-
-.search {
-    margin-left: 13%;
-    width: 33%;
-    height: 54%;
-    padding: 0px;
-}
-
-.searchInput {
-    height: 50%;
-    width: 90%;
+.search-container {
+    display: flex;
+    flex-direction: row;
+    margin: 120px;
+    border-radius: 1px;
+    height: 56%;
+    padding-right: 10px;
+    background-color: white;
+  
+  }
+  
+  .search-field {
+    margin-bottom: 7px;
+    width: 450px;
+    height: 42px;
     border: none;
-    outline: none;
+    background: transparent;
     font-size: 18px;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: normal;
-    color: dimgrey;
+    box-sizing: border-box;
+    outline: none;
+    font-variant-ligatures: none;
+    background: transparent;
+    border: none;
+    font: normal 16px Google Sans, Roboto, Helvetica, Arial, sans-serif;
+  }
+  .s-btn img {
+    border: none;
+    background: transparent;
+    height: 140%;
+    margin-bottom: -20px;
+   
+  }
 
-}
+// .search {
+//     margin-left: 13%;
+//     width: 33%;
+//     height: 54%;
+//     padding: 0px;
+// }
+
+// .searchInput {
+//     height: 50%;
+//     width: 90%;
+//     border: none;
+//     outline: none;
+//     font-size: 18px;
+//     font-family: 'Times New Roman', Times, serif;
+//     font-style: normal;
+//     color: dimgrey;
+
+// }
 
 .Profile {
     display: flex;

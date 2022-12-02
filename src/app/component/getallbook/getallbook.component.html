@@ -1,0 +1,39 @@
+
+<div class="book-container">
+    <div class="bookCount">
+        <span class="books">Books </span>
+       
+    </div>
+    <div class="sort" >
+        <mat-form-field appearance="outline">
+            <mat-label>Sort by relevance</mat-label>
+            <mat-select class="matselect">
+                <mat-option  value="one">Price:Low to High</mat-option>
+                <mat-option  value="two">Price:High to Low</mat-option>
+                <mat-option  value="third">Newest First</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div class="bookcard" >
+        <div class="entirebook" *ngFor="let Book of AllBooks">
+            <div class="bookimg" >
+                <img class="img1" src="../../../assets/book1.png" alt="">
+            </div>
+            <h2 class="title">{{Book.bookName}}</h2>
+            <p id="para">by {{Book.author}}</p>
+            <div class="rating">
+                4.5<img class="Star" src="../../../assets/star_outline_white_24dp.svg" alt="">
+            </div>
+            <p id="count">(20)</p>
+            <div class="price-container">
+                <div class="dicounted-price">
+                    <b>Rs.1000</b>
+                </div>
+                <div class="actual-price">01
+                    Rs.{{Book.price}}
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</div>
