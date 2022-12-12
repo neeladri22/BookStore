@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BookServiceService } from 'src/app/Services/bookService/book-service.service';
 
 @Component({
   selector: 'app-wishlist',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WishlistComponent implements OnInit {
   wishListArray: any = [];
-  constructor() { }
-
+  
+  constructor(private bookService: BookServiceService) { }
   ngOnInit(): void {
+    this.getWishlist();
   }
+  getWishlist() {
+    this.bookService.getWishlist().subscribe((response: any) => {
+      console.log(response)
+      this.wishListArray =  response.result;
+      console.log(this.wishListArray);
+
+    })
+  }
+
+  
 
 }

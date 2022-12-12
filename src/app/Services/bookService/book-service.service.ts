@@ -33,5 +33,15 @@ export class BookServiceService {
    
     return this.httpService.getCartBook('/bookstore_user/get_cart_items', true, header);
   }
+
+  getWishlist(){
+    let header = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'x-access-token': this.token,
+      })
+    } 
+    return this.httpService.getService('/bookstore_user/get_wishlist_items',true,header);
+  }
  
 }

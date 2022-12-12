@@ -20,7 +20,7 @@
 
 .img-content {
     margin-left: 19px;
-    height: 90px;
+    height: 230px;
 }
 
 .book-image {
@@ -29,36 +29,36 @@
 
 .description {
     height: 85px;
+    margin-left: 120px;
+    margin-top: -90px;
 }
 
 .bookName {
     margin: 0%;
     font-weight: bold;
     font-size: larger;
+  
 }
 
 .author {
     margin-top: 5px;
     color: gray;
     font-size: small;
+   
 }
 
 .del {
     margin-left: 15px;
     color: gray;
-}
-
-.head-link {
-    margin-left: 117px;
-    margin-top: 19px;
-    margin-bottom: 19px;
-}
-
-.Homelink:hover {
-    cursor: pointer;
+   
 }
 
 .deletebtn:hover {
     color: gray;
     cursor: pointer;
+   
+}
+.delete{
+    margin-left: 620px;
+    margin-top: -80px;
 }
