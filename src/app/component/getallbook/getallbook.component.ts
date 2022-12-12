@@ -8,7 +8,7 @@ import { BookServiceService } from 'src/app/Services/bookService/book-service.se
   styleUrls: ['./getallbook.component.scss']
 })
 export class GetallbookComponent implements OnInit {
- // AllBooks=[]
+
   AllBooks: any = [];
   constructor(private books:BookServiceService, private router: Router) { }
 
@@ -24,7 +24,7 @@ export class GetallbookComponent implements OnInit {
     })
   }
   quickview(Book:any){  
- //localStorage.setItem('BookId', Book._id); 
-    this.router.navigateByUrl('/dashboard/quickview/' )
+   
+    this.router.navigateByUrl('/dashboard/quickview/' + Book._id)
   }
 }

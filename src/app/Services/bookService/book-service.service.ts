@@ -21,5 +21,17 @@ export class BookServiceService {
     }
     return this.httpService.getService('/bookstore_user/get/book', true, headers)
   }
+  getCart() {
+    this.token = localStorage.getItem('token');
+    
+    let header = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'x-access-token': this.token
+      })
+    }
+   
+    return this.httpService.getCartBook('/bookstore_user/get_cart_items', true, header);
+  }
  
 }

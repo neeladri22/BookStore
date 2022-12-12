@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
       }
       this.user.loginUser(reqdata).subscribe((response: any) => {
         console.log(response);
-        localStorage.setItem("token",response.id);
+        localStorage.setItem("token",response.result.accessToken);
       })
     }
   }

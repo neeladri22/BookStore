@@ -25,6 +25,6 @@ export class UserServiceService {
         'Content-Type': 'application/json',
       })
     };
-    return this.httpService.postService('bookstore_user/login', reqdata, false, headers)
+    return this.httpService.postService('/bookstore_user/login', reqdata, false, headers)
   }
 }

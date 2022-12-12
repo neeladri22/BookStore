@@ -1,0 +1,56 @@
+<div class="main">
+    <div class="heading">
+        <span class="home" routerLink="/dashboard/books">Home /</span><span> My cart</span>
+    </div>
+    <div class="main-content">
+        <div class="title-header">
+
+            <span class="title">My Cart({{CartList.length}}) </span>
+            <div>
+                <select class="location">
+                    <option> Use Current Location</option>
+                </select>
+            </div>
+
+        </div>
+        <div class="bodyBox">
+            <div *ngFor="let Book of CartList">
+                <div>
+                    <img src="../../../assets/book1.png" alt="" class="image">
+                </div>
+                <div class="details-content">
+                    <div style="margin-left:15px;">
+                        <h2 class="title">{{Book.product_id.bookName}}</h2>
+                        <p id="para"> by {{Book.product_id.author}}</p>
+                    </div>
+                    <div>
+                        <b style="margin-left: 18px;">Rs. {{Book.product_id.price}}</b>
+                        <del id="del"> Rs. {{Book.product_id.price}}</del>
+                    </div>
+                    <div class="quantitiy">
+                        <img class="circle" src="../../../assets/remove_circle_outline_black_24dp.svg">
+                        <div class="inputBox">1</div>
+                        <img class="circle" src="../../../assets/add_circle_outline_black_24dp.svg">
+                        <button class="remove-btn">Remove</button>
+                    </div>
+                    <div style="padding-right:20px;">
+                        <button mat-raised matTooltip="Place Order!" class="button1">PLACE ORDER</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="address">
+        <div>
+            <h2>Address Details</h2>
+        </div>
+
+    </div>
+    <div class="summary">
+        <div>
+            <h2>Order Summary</h2>
+        </div>
+    </div>
+</div>

@@ -16,4 +16,7 @@ export class HttpserviceService {
   getService(url: string, token: boolean = false,httpOption: any) {
     return this.httpclient.get(this.baseUrl+url,token&& httpOption)
   }
+  getCartBook(url: string, token: boolean = true,httpOption: any) {
+    return this.httpclient.get(this.baseUrl+url,token&& httpOption)
+  }
 }

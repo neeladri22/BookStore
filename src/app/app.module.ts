@@ -17,6 +17,8 @@ import {MatIconModule} from '@angular/material/icon';
 import { GetallbookComponent } from './component/getallbook/getallbook.component';
 import {MatSelectModule} from '@angular/material/select';
 import { QuickViewComponent } from './component/quick-view/quick-view.component';
+import { CartComponent } from './component/cart/cart.component';
+import { WishlistComponent } from './component/wishlist/wishlist.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { QuickViewComponent } from './component/quick-view/quick-view.component'
     DashboardComponent,
     GetallbookComponent,
     QuickViewComponent,
+    CartComponent,
+    WishlistComponent,
   
   ],
   imports: [
