@@ -11,7 +11,7 @@
             </button>
             <input class="searchInput" type="text" name="search" placeholder="Search.." />
         </mat-card> -->
-        <div class="search-container">
+        <div class="search-container" (keyup)="searchBook($event)">
             <div class="s-btn" type="button">
                 <img src="../../../assets/search-1300-439394.png">
             </div>

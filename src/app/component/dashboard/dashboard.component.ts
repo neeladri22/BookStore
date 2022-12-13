@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataServiceService } from 'src/app/Services/DataService/data-service.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dataService:DataServiceService) { }
 
   ngOnInit(): void {
+  }
+  searchBook(event:any){
+    this.dataService.sendData(event.target.value)
   }
 
 }

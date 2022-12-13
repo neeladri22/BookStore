@@ -15,7 +15,7 @@
         </mat-form-field>
     </div>
     <div class="bookcard" >
-        <div class="entirebook" *ngFor="let Book of AllBooks">
+        <div class="entirebook" *ngFor="let Book of AllBooks | searchFilter:Search">
             <div class="bookimg" >
                 <img class="img1" src="../../../assets/book1.png" alt="" (click)="quickview(Book)">
             </div>

@@ -19,6 +19,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { QuickViewComponent } from './component/quick-view/quick-view.component';
 import { CartComponent } from './component/cart/cart.component';
 import { WishlistComponent } from './component/wishlist/wishlist.component';
+import { SearchFilterPipe } from './Pipes/search-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { WishlistComponent } from './component/wishlist/wishlist.component';
     QuickViewComponent,
     CartComponent,
     WishlistComponent,
+    SearchFilterPipe,
   
   ],
   imports: [
