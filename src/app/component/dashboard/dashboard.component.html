@@ -20,7 +20,26 @@
                     role="combobox" aria-hidden="false">
             </div>
         </div>
-        <button class="Profile" mat-button>Profile <mat-icon>perm_identity </mat-icon></button>
+        <button class="Profile" mat-button  [matMenuTriggerFor]="menu">Profile <mat-icon>perm_identity </mat-icon></button>
+        
+        <mat-menu #menu="matMenu" class="menu-field">
+            <div class="bg">
+                <h4>Welcome</h4>
+                <p>To acsess account and manage orders</p>
+                <button class="login-btn" (click)="Logout()">Logout</button>
+                <hr>
+                <div class="order">
+                    <img src="../../../assets/markunread-mailbox.svg" alt="">
+                    <p>My Order</p>
+                </div>
+                <div class="order">
+                    <img src="../../../assets/like.svg" alt="">
+                    <p>Wishlist</p>
+                </div>
+            </div>
+        </mat-menu>
+
+
         <button class="cart" mat-button>Cart<mat-icon>shopping_cart</mat-icon></button>
     </mat-toolbar>
     <div>

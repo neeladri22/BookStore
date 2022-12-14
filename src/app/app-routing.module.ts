@@ -7,14 +7,15 @@ import { LoginComponent } from './component/login/login.component';
 import { QuickViewComponent } from './component/quick-view/quick-view.component';
 import { SignUpComponent } from './component/sign-up/sign-up.component';
 import { WishlistComponent } from './component/wishlist/wishlist.component';
-
+import { AuthenticationGuard } from './component/AuthGaurd/authentication.guard'; 
 const routes: Routes = [
   { path: 'signUp', component: SignUpComponent },
   { path: 'login', component: LoginComponent },
+  { path: '', redirectTo: "/login", pathMatch: 'full', },
   {
-    path: 'dashboard', component: DashboardComponent,
+    path: 'dashboard', component: DashboardComponent,canActivate: [AuthenticationGuard],
     children: [
-      { path: '', redirectTo: 'books', pathMatch: 'full', },
+      
       { path: "books", component: GetallbookComponent },
       { path: 'quickview',component:QuickViewComponent},
       { path: 'cart',component:CartComponent },

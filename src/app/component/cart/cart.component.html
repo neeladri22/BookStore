@@ -24,7 +24,7 @@
                         <p id="para"> by {{Book.product_id.author}}</p>
                     </div>
                     <div>
-                        <b style="margin-left: 18px;">Rs. {{Book.product_id.price}}</b>
+                        <b style="margin-left: 18px;">Rs. {{Book.product_id.discountPrice}}</b>
                         <del id="del"> Rs. {{Book.product_id.price}}</del>
                     </div>
                     <div class="quantitiy">
@@ -42,15 +42,99 @@
 
     </div>
 
-    <div class="address">
+    <!-- <div class="address" *ngIf="showAddress">
         <div>
             <h2>Address Details</h2>
         </div>
 
     </div>
+    <div class="customer" *ngIf="!showAddress">
+        <div style="margin: 10px;">
+                <span>
+                    <h2 id="title-name">Customer Details</h2>
+                </span>
+        </div>
+    </div> -->
+    <div class="address">
+        <p style="font-size: 15px;" *ngIf="showAddress">AddressDetails</p>
+        <div *ngIf="showAddress" class="customeraddress">
+
+            <div class="customerHeader">
+                <p style="font-size: 20px;">Customer Details</p>
+                <button>Add New Address</button>
+            </div>
+            <div class="details">
+                <div class="fullName">
+                    <mat-label>Full Name</mat-label>
+                    <mat-form-field appearance="outline">
+                        <input matInput placeholder="Full Name">
+                        <!-- <mat-error>Enter Full Name</mat-error> -->
+                    </mat-form-field>
+                </div>
+
+                <div class="fullName">
+                    <mat-label>Mobile Number</mat-label>
+                    <mat-form-field appearance="outline">
+                        <input matInput type="text" placeholder="Mobile Number">
+                        <!-- <mat-error>Enter Mobile Number</mat-error> -->
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="workAddress">
+
+                <p>Address</p>
+                <textarea type="text" class="addressInput"></textarea>
+                <div class="city">
+                    <div class="fullName">
+                        <mat-label>city/town</mat-label>
+                        <mat-form-field appearance="outline">
+                            <input matInput placeholder="City/Town">
+                            <!-- <mat-error>Enter City Name</mat-error> -->
+                        </mat-form-field>
+                    </div>
+
+                    <div class="fullName">
+                        <mat-label>state</mat-label>
+                        <mat-form-field appearance="outline">
+                            <input matInput type="text" placeholder="State">
+                            <!-- <mat-error>Enter State Name</mat-error> -->
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+            <h4 style="margin-top: 10px;" class="Typetext">Type</h4>
+            <mat-radio-group >
+                <mat-radio-button class="type_buttons" value="Home">Home</mat-radio-button>
+                <mat-radio-button class="type_buttons" value="Office">Office</mat-radio-button>
+                <mat-radio-button class="type_buttons" value="Other">Other</mat-radio-button>
+            </mat-radio-group>
+        </div>
+        <div *ngIf="displayContinueButton">
+            <button type="submit" class="continue" (click)="showOrderDetails()">CONTINUE</button>
+        </div>
+    </div>
+
+
     <div class="summary">
-        <div>
-            <h2>Order Summary</h2>
+        <!-- <p *ngIf="showSummary">Order Summery</p> -->
+        <div *ngIf="showSummeryDetails" class="showSummrey">
+            <p style="font-size: 20px; margin-bottom: 20px;">Order Summery</p>
+            <div class="book" *ngFor="let Book of CartList">
+                <div class="bookImg"><img src="../../../assets/book1.png" alt="" style="width: 60px;"></div>
+                <div class="bookinfo">
+                    <div style="margin-left:15px;">
+                        <h2 class="title">{{Book.product_id.bookName}}</h2>
+                        <p id="para"> by {{Book.product_id.author}}</p>
+                    </div>
+                    <div>
+                        <b style="margin-left: 18px;">Rs. {{Book.product_id.discountPrice}}</b>
+                        <del id="del"> Rs. {{Book.product_id.price}}</del>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button class="order1">CHECKOUT</button>
+            </div>
         </div>
     </div>
 </div>

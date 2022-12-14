@@ -117,32 +117,131 @@ margin-top: -90px;
 
 }
 
-.address {
-    border-color: black;
-    border: 2px solid #E4E4E4;
-    height: auto;
-    margin-left: 10px;
-    margin-right: 330px;
-    margin-top: 20px;
+// .address {
+//     border-color: black;
+//     border: 2px solid #E4E4E4;
+//     height: auto;
+//     margin-left: 10px;
+//     margin-right: 330px;
+//     margin-top: 20px;
 
-    h2 {
-        padding: 0px;
-        padding-top: 13px;
-        padding-left: 15px;
-    }
+//     h2 {
+//         padding: 0px;
+//         padding-top: 13px;
+//         padding-left: 15px;
+//     }
+// }
+.address{
+    border-color: black;
+        border: 2px solid #E4E4E4;
+        height: auto;
+        margin-left: 10px;
+        margin-right: 330px;
+        margin-top: 20px;
+    padding: 20px 30px;
+   
 }
-.summary {
+.customeraddress{
+    margin-bottom: 40px;
+}
+
+.customerHeader{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.customerHeader button{
+    margin-left: auto;
+    color: #A03037;
+    background-color: #fff;
+    border: 2px solid #A03037;
+    border-radius: 2px;
+    padding: 0 10px;
+}
+.details{
+    display: flex;
+    gap: 10px;
+    margin-left: 35px;
+}
+
+.fullName{
+    display: flex;
+    flex-direction: column;
+}
+.workAddress{
+    margin-left: 35px;
+}
+
+.workAddress-xs{
+    margin-left: 0px;
+}
+
+.optionAddress b{
+    padding-right: 10px;
+}
+
+.addressInput{
+    width: 410px;
+    height: 60px;
+    color: #857f7f;
+    background-color: #f5f3f3;
+    border: 1px solid rgb(219, 202, 202);
+}
+
+
+
+.city{
+    display: flex;
+    gap: 10px;
+}
+.Typetext{
+    margin-left: 30px;
+}
+.type_buttons{
+    margin-left: 48px;  
+}
+.continue{
+    float: right;
+    background-color: rgb(61, 61, 255);
+    color: #f5f3f3;
+    border: none;
+    border-radius: 2px;
+    font-size: 15px;
+    height: 28px;
+    width: 150px;
+    margin-top: -10px;
+    cursor: pointer;
+}
+.summary{
     border-color: black;
     border: 2px solid #E4E4E4;
     height: auto;
     margin-left: 10px;
     margin-right: 330px;
     margin-top: 20px;
+   padding: 20px 30px;
 
-    h2 {
-        padding: 0px;
-        padding-top: 13px;
-        padding-left: 15px;
-    }
+}
+
+.showSummrey{
+    margin-bottom: 40px;
+}
+
+.order1{
+    float: right;
+    background-color: rgb(61, 61, 255);
+    color: #f5f3f3;
+    border: none;
+    border-radius: 2px;
+    font-size: 15px;
+    height: 30px;
+    width: 150px;
+    cursor: pointer;
+
+}
+
+.bookinfo{
+    margin-left: 95px;
+    margin-top: -90px;
 }
 

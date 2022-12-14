@@ -8,16 +8,16 @@
         <mat-form-field appearance="outline">
             <mat-label>Sort by relevance</mat-label>
             <mat-select class="matselect">
-                <mat-option  value="one">Price:Low to High</mat-option>
-                <mat-option  value="two">Price:High to Low</mat-option>
-                <mat-option  value="third">Newest First</mat-option>
+                <mat-option  value="one" (click)="lowtohigh()">Price:Low to High</mat-option>
+                <mat-option  value="two" (click)=" hightolow()">Price:High to Low</mat-option>
+                <mat-option  value="third" (click)="newestarrivals()">Newest First</mat-option>
             </mat-select>
         </mat-form-field>
     </div>
     <div class="bookcard" >
         <div class="entirebook" *ngFor="let Book of AllBooks | searchFilter:Search">
-            <div class="bookimg" >
-                <img class="img1" src="../../../assets/book1.png" alt="" (click)="quickview(Book)">
+            <div class="bookimg" (click)="quickview(Book)" >
+                <img class="img1" src="../../../assets/book1.png" alt="" >
             </div>
             <h2 class="title">{{Book.bookName}}</h2>
             <p id="para">by {{Book.author}}</p>
@@ -27,7 +27,8 @@
             <p id="count">(20)</p>
             <div class="price-container">
                 <div class="dicounted-price">
-                    <b>Rs.1000</b>
+                    <!-- <b>Rs.1000</b> -->
+                    Rs. {{Book.discountPrice}}
                 </div>
                 <div class="actual-price">01
                     Rs.{{Book.price}}
@@ -37,3 +38,5 @@
         </div>
     </div>
 </div>
+
+

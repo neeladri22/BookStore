@@ -8,7 +8,11 @@ import { BookServiceService } from 'src/app/Services/bookService/book-service.se
 })
 export class CartComponent implements OnInit {
    CartList: any=[];
-   //Book:any;
+   showAddress = true;
+   showCustomerDetails = true;
+   displayContinueButton=true;
+   showSummary=true;
+   showSummeryDetails=true;
   constructor(private httpGetCart: BookServiceService) { }
 
   ngOnInit(): void {
@@ -22,6 +26,12 @@ export class CartComponent implements OnInit {
 
     });
   }
-  
+  showOrderDetails(){
+    this.showSummary = false
+    this.displayContinueButton = false
+    this.showSummeryDetails=false;
+  }
 
 }
+
+

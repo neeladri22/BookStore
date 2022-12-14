@@ -20,7 +20,9 @@ import { QuickViewComponent } from './component/quick-view/quick-view.component'
 import { CartComponent } from './component/cart/cart.component';
 import { WishlistComponent } from './component/wishlist/wishlist.component';
 import { SearchFilterPipe } from './Pipes/search-filter.pipe';
-
+import { MatRadioModule } from '@angular/material/radio';
+import { MatMenuModule } from '@angular/material/menu';
+import { AuthguardServiceService } from './Services/AuthGaurdService/authguard-service.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +34,7 @@ import { SearchFilterPipe } from './Pipes/search-filter.pipe';
     CartComponent,
     WishlistComponent,
     SearchFilterPipe,
+    
   
   ],
   imports: [
@@ -46,11 +49,17 @@ import { SearchFilterPipe } from './Pipes/search-filter.pipe';
     HttpClientModule,
     MatToolbarModule,
     MatIconModule,
-    MatSelectModule
+    MatSelectModule,
+    MatRadioModule,
+    MatMenuModule
+   
+    
   
 
   ],
-  providers: [],
+  providers: [
+    AuthguardServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
