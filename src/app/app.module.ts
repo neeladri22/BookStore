@@ -23,6 +23,7 @@ import { SearchFilterPipe } from './Pipes/search-filter.pipe';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatMenuModule } from '@angular/material/menu';
 import { AuthguardServiceService } from './Services/AuthGaurdService/authguard-service.service';
+import { PlaceOrderComponent } from './component/place-order/place-order.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +35,7 @@ import { AuthguardServiceService } from './Services/AuthGaurdService/authguard-s
     CartComponent,
     WishlistComponent,
     SearchFilterPipe,
+    PlaceOrderComponent,
     
   
   ],

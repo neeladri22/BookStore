@@ -19,4 +19,7 @@ export class HttpserviceService {
   getCartBook(url: string, token: boolean = true,httpOption: any) {
     return this.httpclient.get(this.baseUrl+url,token&& httpOption)
   }
+  deleteService(url: string, token: boolean = true, httpOptions: any) {
+    return this.httpclient.delete(this.baseUrl+url,token && httpOptions)
+  }
 }

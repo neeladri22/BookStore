@@ -8,12 +8,15 @@ import { BookServiceService } from 'src/app/Services/bookService/book-service.se
 })
 export class CartComponent implements OnInit {
    CartList: any=[];
-   showAddress = true;
-   showCustomerDetails = true;
-   displayContinueButton=true;
-   showSummary=true;
-   showSummeryDetails=true;
-  constructor(private httpGetCart: BookServiceService) { }
+   
+   isShow = false;
+  address = true;
+   placeorder = true;
+  cont = true;
+  summary = true;
+  Books: any
+  item_qty = 1;
+  constructor(private httpGetCart: BookServiceService,private book: BookServiceService) { }
 
   ngOnInit(): void {
     this.getCartbook();
@@ -26,11 +29,36 @@ export class CartComponent implements OnInit {
 
     });
   }
-  showOrderDetails(){
-    this.showSummary = false
-    this.displayContinueButton = false
-    this.showSummeryDetails=false;
+  deleteItem(Book: any) {
+
+    console.log(Book)
+    this.book.removeItem(Book).subscribe((res: any) => {
+      console.log(res)
+    })
   }
+
+
+ 
+  addressBar() {
+    this.address = false
+    this.placeorder = false
+  }
+  continueBar() {
+    this.summary = false
+    this.cont = false
+  }
+ 
+  placeOrder() {
+    
+  }
+  
+  increase(Book: any) {
+   
+  }
+  decrease(Book: any) {
+    
+  }
+ 
 
 }
 

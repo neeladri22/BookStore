@@ -197,3 +197,42 @@
     background: blue;
     border: none;
 }
+
+.bottom-options {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+
+    align-content: space-around;
+    width: 300px;
+    margin-left: -5px;
+margin-top: 20px;
+    .buttons {
+
+        display: flex;
+        flex-direction: row;
+
+        button {
+            width: 140px;
+            margin-right: 20px;
+        }
+
+        .cart-button {
+            color: aliceblue;
+            background-color: #A03037;
+        }
+
+        .wishlist-button {
+            background-color: black;
+            color: white;
+            padding: auto;
+        }
+
+        .wish-img {
+            width: 15px;
+            margin-right: 10px;
+            margin-bottom: 3px;
+
+        }
+    }
+}
