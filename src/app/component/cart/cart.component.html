@@ -58,81 +58,62 @@
                 <div class="cust-container">
                     <div class="fname">
                         <div>
-                            <label for="fname" class="label">Full Name</label>
+                            <label  class="label">Full Name</label>
                         </div>
                         <div>
                             <p>{{Book.user_id.fullName}}</p>
-                            <!-- <mat-form-field class="cust-field" appearance="outline">
-                                <input matInput placeholder="Enter Full name" type="text" formControlName="fullName"
-                                    class="form-control">
-                                    
-                            </mat-form-field> -->
+                            
                         </div>
                     </div>
                     <div class="fname">
                         <div>
-                            <label for="MoNum" class="label">Mobile Number</label>
+                            <label  class="label">Mobile Number</label>
                         </div>
                         <p>{{Book.user_id.phone}}</p>
-                        <!-- <div>
-                            <mat-form-field class="cust-field" appearance="outline">
-                                <input matInput placeholder="Enter Mobile Number" type="text" formControlName="phone"
-                                    class="form-control">
-                            </mat-form-field> -->
+                       
                     </div>
                 </div>
             </div>
             <div>
                 <h4>Address</h4>
-                <div class="fad">
+                <div class="fulladdress">
                     <p>{{Book.user_id.address[0].fullAddress}}</p>
-                    <!-- <mat-form-field appearance="outline">
-                            <input matInput placeholder="" formControlName="fullAddress">
-                        </mat-form-field> -->
+                
                 </div>
             </div>
             <div class="cust-container">
                 <div class="fname">
                     <div>
-                        <label for="MoNum" class="label">City/Town</label>
+                        <label  class="label">City/Town</label>
                     </div>
                     <div>
                         <p>{{Book.user_id.address[0].city}}</p>
-                        <!-- <p>{{Book.user_id.fullName}}</p> -->
-                        <!-- <mat-form-field class="cust-field" appearance="outline">
-                                <input matInput placeholder="Enter City/Town" type="text" formControlName="city"
-                                    class="form-control">
-                            </mat-form-field> -->
+                    
                     </div>
                 </div>
                 <div class="fname">
                     <div>
-                        <label for="MoNum" class="label">State</label>
+                        <label  class="label">State</label>
                     </div>
                     <div>
                         <p>{{Book.user_id.address[0].state}}</p>
-                        <!-- <p>{{Book.user_id.fullName}}</p> -->
-                        <!-- <mat-form-field class="cust-field" appearance="outline">
-                                <input matInput placeholder="Enter State" type="text" formControlName="state"
-                                    class="form-control">
-                            </mat-form-field> -->
+                        
                     </div>
                 </div>
             </div>
-            <!-- <div>
+            <div>
                 <h4 style="margin-top: 10px;" class="textName">Type</h4>
-                <mat-radio-group formControlName="addressType">
+                <mat-radio-group >
                   <mat-radio-button class="example-margin" value="Home">Home</mat-radio-button>
                   <mat-radio-button class="example-margin" value="Office">Office</mat-radio-button>
                   <mat-radio-button class="example-margin" value="Other">Other</mat-radio-button>
                 </mat-radio-group>
               </div>
-        </div> -->
+        </div>
             <div *ngIf="cont">
                 <a class="order" (click)="continueBar()">Continue</a>
             </div>
         </div>
-
 
     </div>
     <div class="summary">
@@ -159,7 +140,7 @@
                 </div>
             </div>
             <div>
-                <a class="order" (click)="placeOrder()" >Checkout</a>
+                <a class="order" (click)="placeOrder()" routerLink="/dashboard/order">Checkout</a>
             </div>
         </div>
     </div>

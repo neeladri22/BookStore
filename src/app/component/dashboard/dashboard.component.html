@@ -32,15 +32,18 @@
                     <img src="../../../assets/markunread-mailbox.svg" alt="">
                     <p>My Order</p>
                 </div>
-                <div class="order">
+                <div class="order" (click)="wish()">
                     <img src="../../../assets/like.svg" alt="">
                     <p>Wishlist</p>
                 </div>
             </div>
         </mat-menu>
-
-
-        <button class="cart" mat-button>Cart<mat-icon>shopping_cart</mat-icon></button>
+        <button mat-icon-button class="cart" [matBadge]="badgeCount" matBadgeColor="warn" (click)="cart()">
+            <mat-icon>
+                <img src="../../../assets/cart.svg" alt="">
+            </mat-icon>
+            <label>Cart</label>
+        </button>
     </mat-toolbar>
     <div>
         <router-outlet></router-outlet>

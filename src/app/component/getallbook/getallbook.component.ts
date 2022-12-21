@@ -12,15 +12,19 @@ export class GetallbookComponent implements OnInit {
 
   AllBooks: any = [];
   Search = '';
+  page:number = 1;
+  totalLength:any;
+ 
   constructor(private books: BookServiceService, private router: Router, private dataservice: DataServiceService) { }
 
   ngOnInit(): void {
+    this.getAllBooks();
     this.dataservice.receivedData.subscribe((result: any) => {
       console.log(result)
       this.Search = result;
 
     });
-    this.getAllBooks();
+   
   }
 
   getAllBooks() {
@@ -34,13 +38,16 @@ export class GetallbookComponent implements OnInit {
     this.dataservice.sendData(book)
     this.router.navigateByUrl('/dashboard/quickview')
   }
-  lowtohigh() {
-    this.AllBooks = this.AllBooks.sort((low: any, high: any) => low.discountPrice - high.discountPrice);
+  lowtohigh(){
+    this.AllBooks = this.AllBooks.sort((low:any, high:any) => low.discountPrice-high.discountPrice);
   }
-  hightolow() {
-    this.AllBooks = this.AllBooks.sort((low: any, high: any) => high.discountPrice - low.discountPrice);
+
+  hightolow(){
+    this.AllBooks = this.AllBooks.sort((low:any, high:any) => high.discountPrice-low.discountPrice);
   }
-  newestarrivals() {
-    this.AllBooks.reverse();
+
+  newestarrivals(){
+    this.AllBooks = this.AllBooks.reverse();
   }
+
 }

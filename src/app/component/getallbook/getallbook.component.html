@@ -10,12 +10,12 @@
             <mat-select class="matselect">
                 <mat-option  value="one" (click)="lowtohigh()">Price:Low to High</mat-option>
                 <mat-option  value="two" (click)=" hightolow()">Price:High to Low</mat-option>
-                <mat-option  value="third" (click)="newestarrivals()">Newest First</mat-option>
+                <mat-option  value="third" (click)="newestarrivals()">Newest Arrivals</mat-option>
             </mat-select>
         </mat-form-field>
     </div>
     <div class="bookcard" >
-        <div class="entirebook" *ngFor="let Book of AllBooks | searchFilter:Search">
+        <div class="entirebook" *ngFor="let Book of AllBooks | searchFilter:Search | paginate: { itemsPerPage: 10, currentPage: page, totalItems:totalLength }">
             <div class="bookimg" (click)="quickview(Book)" >
                 <img class="img1" src="../../../assets/book1.png" alt="" >
             </div>
@@ -27,7 +27,7 @@
             <p id="count">(20)</p>
             <div class="price-container">
                 <div class="dicounted-price">
-                    <!-- <b>Rs.1000</b> -->
+                  
                     Rs. {{Book.discountPrice}}
                 </div>
                 <div class="actual-price">01
@@ -36,6 +36,9 @@
             
             </div>
         </div>
+    </div>
+    <div>
+        <pagination-controls class="text-center" (pageChange)="page = $event"></pagination-controls>
     </div>
 </div>
 

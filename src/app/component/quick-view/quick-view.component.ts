@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { BookServiceService } from 'src/app/Services/bookService/book-service.service';
 import { DataServiceService } from 'src/app/Services/DataService/data-service.service';
@@ -9,6 +9,7 @@ import { DataServiceService } from 'src/app/Services/DataService/data-service.se
   styleUrls: ['./quick-view.component.scss']
 })
 export class QuickViewComponent implements OnInit {
+  @Output() RefreshEvent = new EventEmitter<string>();
   Book: any;
   rating: any;
   BookId: any;
@@ -22,8 +23,25 @@ export class QuickViewComponent implements OnInit {
 
   }
   addToBag(){
-   
+    let Book = {
+      product_id: this.Book._id,
+    }
+    console.log(Book)
+    this.bookService.addCart(Book).subscribe((res: any) => {
+      console.log(res)
+     
+      
+    })
   }
-  wishlist(){}
+  wishlist(){
+    let Book = {
+      product_id: this.Book._id,
+    }
+    console.log(Book)
+    this.bookService.Wishlist(Book).subscribe((res: any) => {
+      console.log(res)
+     
+    })
+  }
 }
 

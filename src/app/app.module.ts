@@ -24,6 +24,9 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatMenuModule } from '@angular/material/menu';
 import { AuthguardServiceService } from './Services/AuthGaurdService/authguard-service.service';
 import { PlaceOrderComponent } from './component/place-order/place-order.component';
+import {MatBadgeModule} from '@angular/material/badge';
+import {NgxPaginationModule} from 'ngx-pagination'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,7 +56,9 @@ import { PlaceOrderComponent } from './component/place-order/place-order.compone
     MatIconModule,
     MatSelectModule,
     MatRadioModule,
-    MatMenuModule
+    MatMenuModule,
+    MatBadgeModule,
+    NgxPaginationModule
    
     
   

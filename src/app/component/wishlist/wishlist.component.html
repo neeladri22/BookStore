@@ -11,20 +11,21 @@
     </div>
     <mat-card class="wishlist" *ngFor="let list of wishListArray">
 
-        <div class="img-content" >
+        <div class="img-content">
 
-                <div class="book-image">
-                    <img src="../../../assets/book1.png" width="65px" height="85px">
-                </div>
+            <div class="book-image">
+                <img src="../../../assets/book1.png" width="65px" height="85px">
+            </div>
 
-                <div class="description">
-                    <h4 class="bookName">{{list.product_id.bookName}}</h4>
-                    <h5 class="author">by {{list.product_id.author}}</h5>
-                    <h4><b>Rs. {{list.product_id.price}}</b> <del class="del">Rs. 5000</del></h4>
-                </div>
-           
-            <div class="delete">
-                <mat-icon class="deletebtn">delete_outline</mat-icon>
+            <div class="description">
+                <h4 class="bookName">{{list.product_id.bookName}}</h4>
+                <h5 class="author">by {{list.product_id.author}}</h5>
+                <h4><b>Rs. {{list.product_id.price}}</b> <del class="del">Rs. 5000</del></h4>
+            </div>
+
+
+            <div class="delete" (click)="deleteWishlist(list.product_id._id)">
+                <img src="../../../assets/delete_FILL0_wght400_GRAD0_opsz48 (2).svg" alt="" style="width: 25px;">
             </div>
         </div>
 

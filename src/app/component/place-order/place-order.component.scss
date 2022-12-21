@@ -1,0 +1,46 @@
+.main-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-bottom: 50px;
+   margin-left: 300px;
+    
+}
+.order-msg{
+    display: flex;
+    flex-direction: column;
+
+    .top-img{
+        width: 200px;
+        margin-left: 320px;
+    }
+    p{
+        font-family: "lato";
+        font-size: 30px;
+        margin-left: 260px;
+    }
+    .bottom-img{
+        width: 200px;
+        margin-left: 329px;
+    }
+
+}
+.msg{
+    margin-bottom: 40px;
+    margin-left: -250px;
+}
+.details-table{
+    margin-left: 60px;
+    margin-bottom: 60px;
+}
+.continue-button{
+    margin-left: 320px;
+    
+    button{
+        background-color: #3371B5;
+        color: aliceblue;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        width: 250px;
+    }
+}

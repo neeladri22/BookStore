@@ -8,10 +8,14 @@ import { DataServiceService } from 'src/app/Services/DataService/data-service.se
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
-
-  constructor(private router:Router,private dataService:DataServiceService) { }
-
+  badgeCount:any;
+  constructor(private router:Router,private dataService:DataServiceService) {
+    this.badgeCount=0;
+   }
+  
+ 
   ngOnInit(): void {
+    this.badgeCount++;
   }
   searchBook(event:any){
     this.dataService.sendData(event.target.value)
@@ -21,6 +25,13 @@ export class DashboardComponent implements OnInit {
     localStorage.removeItem('token');
     this.router.navigateByUrl("/login")
     console.log("Logout Successfully..!!!");
+  }
+  wish(){
+    this.router.navigateByUrl("/dashboard/wishlist");
+  }
+  cart(){
+    this.router.navigateByUrl("/dashboard/cart");
+   
   }
 
 }

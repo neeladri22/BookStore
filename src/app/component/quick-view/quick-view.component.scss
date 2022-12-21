@@ -179,20 +179,56 @@
 .ratename {
     font-size: 13px;
     font-weight: 500;
-    margin-top: 10px;
+    margin-top: 20px;
 
 }
 
 .rate {
-    margin-right: 10%;
+    height: 35px;
+    width: 90%;
+    margin-left: -11pc;
+   }
+
+.rate:not(:checked)>input {
+    position: absolute;
+    top: -9999px;
+}
+
+.rate:not(:checked)>label {
+    float: right;
+    width: 1em;
+    margin-bottom: 4px;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    font-size: 30px;
+    color: #ccc;
+}
+
+.rate:not(:checked)>label:before {
+    content: '★ ';
+}
+
+.rate>input:checked~label {
+    color: #ffc700;
+}
+
+.review {
+    height: 60px;
+    width: 90%;
+    border: none;
+    outline: none;
+    margin-left: 11px;
+    font-size: 15px;
+   background-color: white;
 }
 
 .submitbutton {
-    height: 33px;
-    width: 95px;
+    height: 23px;
+    width: 70px;
 
-    margin-top: 140px;
-    margin-left: 270px;
+    margin-top: 14px;
+    margin-left: 273px;
     color: white;
     background: blue;
     border: none;
@@ -236,3 +272,5 @@ margin-top: 20px;
         }
     }
 }
+
+

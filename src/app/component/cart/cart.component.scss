@@ -7,7 +7,6 @@
     padding: 6% 200px;
     margin-bottom: -60px;
 }
-
 .header {
     display: flex;
     flex-direction: row;
@@ -81,7 +80,7 @@
         padding-left: 37px;
     }
 
-    .fad {
+    .fulladdress {
         margin: 0rem;
         height: auto;
         margin-right: -34px;
@@ -183,10 +182,12 @@ img {
     .btn {
         margin-left: 9px;
         margin-top: 22px;
+       
 
         button {
             border: none;
             background: none;
+            cursor: pointer;
         }
     }
 }
@@ -195,7 +196,7 @@ img {
     background-color: #185abc;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 10px 22px;
     text-align: center;
     text-decoration: none;
     display: list-item;
@@ -203,7 +204,8 @@ img {
     margin: 10px 7px;
     cursor: pointer;
     border-radius: 6px;
-    margin-left: 608px;
+    margin-left: 715px;
+    left: 190px;
 }
 
 .mat-form-field {
@@ -211,3 +213,6 @@ img {
     width: 94%;
 }
 
+.example-margin{
+    margin-left: 50px;
+}

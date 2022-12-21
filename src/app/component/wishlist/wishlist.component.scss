@@ -5,16 +5,19 @@
 }
 
 .content-box {
+    width: 50%;
     margin-left: 135px;
     margin-top: 10px;
-    margin-right: 391px;
+    margin-right: 320px;
     margin-bottom: 250px;
+  position: sticky;
 }
 
 .wish-cal {
     height: 38px;
     background-color: #F5F5F5;
     border: 1px solid #E4E4E4;
+   
    
 }
 
@@ -59,6 +62,8 @@
    
 }
 .delete{
-    margin-left: 620px;
+    margin-left: 360px;
     margin-top: -80px;
+    cursor: pointer;
+   
 }

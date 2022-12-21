@@ -22,6 +22,12 @@ export class WishlistComponent implements OnInit {
     })
   }
 
+  deleteWishlist(data: any) {
+    this.bookService.deleteWishlist(data).subscribe((response: any) => {
+      console.log('delete wishlist', response)
+     
+    })
+  }
   
 
 }
